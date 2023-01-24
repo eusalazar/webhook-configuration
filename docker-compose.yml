@@ -1,0 +1,24 @@
+version: '3.7'
+
+services:
+  ruby-sdmin:
+    environment:
+      VIRTUAL_HOST: admin.euge.dev, www.admin.euge.dev
+      LETSENCRYPT_HOST: admin.euge.dev, www.admin.euge.dev
+      LETSENCRYPT_EMAIL: eugeniasalazar745@gmail.com
+      VIRTUAL_PORT: 3600
+    build:
+      context: .
+      dockerfile: Dockerfile
+    expose:
+      - 3600
+    ports:
+      - 3600:3600
+    container_name: ruby-admin
+    volumes:
+      - .:/usr/src/app
+
+networks:
+  default:
+    external:
+      name: nginx-proxy
