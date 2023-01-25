@@ -8,4 +8,4 @@ RUN gem install puma
 
 EXPOSE 3601
 
-CMD ruby src/server.rb -p $VIRTUAL_PORT
+CMD ruby src/server.rb -p $VIRTUAL_PORT -o localhost
