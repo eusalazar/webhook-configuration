@@ -6,14 +6,14 @@ services:
       VIRTUAL_HOST: admin.euge.dev, www.admin.euge.dev
       LETSENCRYPT_HOST: admin.euge.dev, www.admin.euge.dev
       LETSENCRYPT_EMAIL: eugeniasalazar745@gmail.com
-      VIRTUAL_PORT: 3600
+      VIRTUAL_PORT: 3601
     build:
       context: .
       dockerfile: Dockerfile
     expose:
-      - 3600
+      - 3601
     ports:
-      - 3600:3600
+      - 3601:3601
     container_name: ruby-admin
     volumes:
       - .:/usr/src/app

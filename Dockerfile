@@ -6,6 +6,6 @@ RUN gem install sinatra
 RUN gem install json
 RUN gem install puma
 
-EXPOSE 3600
+EXPOSE 3601
 
 CMD ruby src/server.rb -p $VIRTUAL_PORT
