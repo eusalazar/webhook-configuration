@@ -1,5 +1,6 @@
 require 'sinatra'
 require 'json'
+set :bind, 'localhost'
 
 post '/payload' do
   puts "PAyload, #{request.body}"
